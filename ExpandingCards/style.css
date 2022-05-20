@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 /* universal selector */
 * {
@@ -11,9 +11,6 @@
 body {
   margin: 0;
   display: flex;
-
-  /* make items go vertically */
-  flex-direction: column;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
@@ -27,5 +24,68 @@ body {
   /* no scroll bars */
   overflow: hidden;
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Muli", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  /* set bg image to full flex box size */
+  /* to preserve rounded corners on large screens use 
+  background-size: cover;
+  */
+  background-size: auto 100%;
+
+  /* set bg image centered in flex box */
+  background-position: center;
+
+  /* cut off repeated shit */
+  background-repeat: no-repeat;
+
+  height: 80vh;
+
+  /* border: little rounded edges on boxes */
+  border-radius: 50px;
+
+  color: white;
+  cursor: pointer;
+
+  /* initial flex */
+  flex: 0.5;
+
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 36px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
