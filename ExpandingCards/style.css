@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
 /* universal selector */
 * {
@@ -24,7 +24,7 @@ body {
   /* no scroll bars */
   overflow: hidden;
 
-  font-family: "Muli", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
   /* to preserve rounded corners on large screens use 
   background-size: cover;
   */
-  background-size: auto 100%;
+  background-size: cover;
 
   /* set bg image centered in flex box */
   background-position: center;
@@ -70,13 +70,30 @@ body {
   opacity: 0;
 }
 
+.panel h3.about {
+  -webkit-text-stroke: 1px rgb(19, 24, 36);
+}
+
+.panel h3.photos {
+  -webkit-text-stroke: 1px rgb(194, 152, 14);
+}
+.panel h3.projects {
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+.panel h3.dubai {
+  -webkit-text-stroke: 1px rebeccapurple;
+}
+
 .panel.active {
   flex: 5;
+  max-width: 3500px;
 }
 
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+  bottom: 45px;
+  left: 45px;
 }
 
 @media (max-width: 600px) {
