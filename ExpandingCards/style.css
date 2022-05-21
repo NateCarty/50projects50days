@@ -82,8 +82,8 @@ body {
   position: absolute;
 
   /* inside each panel, start the header 20px from bottom and 20px from left */
-  bottom: 20px;
-  left: 20px;
+  bottom: 45px;
+  left: 45px;
 
 
   margin: 0;
@@ -121,8 +121,6 @@ body {
 
   /* show the opacity change with a transition */
   transition: opacity 0.3s ease-in 0.4s;
-  bottom: 45px;
-  left: 45px;
 }
 
 /* if the window is less than 600 pixels do this: */
