@@ -1,6 +1,7 @@
 /* https://fonts.google.com/ */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
+/* create our own variables so we don't have to repeat as much */
 :root {
   --line-border-fill: aquamarine;
   --line-border-empty: rgb(161, 185, 177);
