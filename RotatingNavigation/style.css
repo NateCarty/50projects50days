@@ -13,21 +13,6 @@ body {
   /* margin means space between item and other items */
   margin: 0;
 
-
-  display: flex;
-
-  /* make items flex vertically */
-  flex-direction: column;
-
-  /* align the items towards the center vertically (even space on both sides) */
-  align-items: center;
-
-  /* put items in the center of the flex display */
-  justify-content: center;
-
-  /* body is 100% of browser height */
-  height: 100vh;
-
   /* no scroll bars */
   overflow: hidden;
 
