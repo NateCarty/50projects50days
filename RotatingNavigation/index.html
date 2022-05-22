@@ -8,12 +8,40 @@
     integrity hash makes sure resource is not altered before loading, hashed at: https://www.srihash.org/ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Project Name</title>
+    <title>Rotating Navigation</title>
 </head>
 <body>
-    <h1>Project Starter</h1>
-    <h1>testing flex testing flex</h1>
-    <h2>I repeat testing flex</h2>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Project 3: Turning Navigation</h1>
+            <small>Nate Carty</small>
+            <p>This is just a random paragragh. It could be like an article or a list of deviled egg ingredients but that is the fun in this project. You could add anything to this section / all sections. Once you know how to create it, it is just changing some simple values to get the product you want.</p>
+            <h3>Cash</h3>
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/newscms/2019_06/2746941/190208-stock-money-fanned-out-ew-317p.jpg" alt="Picture of money">
+            <p>This is where the rest of the article / text goes. Imma just say get that cash tho</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <i class="fas-fa-home"> Home </i>
+                <i class="fas-fa-user-alt"> About </i>
+                <i class="fas-fa-Envelope"> Contact</i>
+            </li>
+        </ul>
+    </nav>
 </body>
     <script src="script.js"></script>
 </html>
