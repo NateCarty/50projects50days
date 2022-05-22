@@ -46,6 +46,8 @@ body {
   top: -100px;
   left: -100px;
   z-index: 100;
+  transition: transform 0.5s linear;
+
 }
 
 .circle {
@@ -54,8 +56,6 @@ body {
   width: 200px;
   border-radius: 50%;
   position: relative;
-  transition: transform 0.5s linear;
-
 }
 
 .container.show-nav .circle-container {
