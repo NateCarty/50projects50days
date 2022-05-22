@@ -59,7 +59,8 @@ body {
 }
 
 .container.show-nav .circle-container {
-  transform: rotate(-90 deg);
+  transform: rotate(-90deg);
+  transition: transform 0.5s linear;
 }
 
 .circle button {
