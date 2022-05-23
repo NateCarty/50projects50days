@@ -9,7 +9,10 @@
 }
 
 body {
+
+  /* margin is the space around an elements border */
   margin: 0;
+
   display: flex;
 
   /* align the items towards the center vertically (even space on both sides) */
@@ -27,49 +30,69 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+/* want the panel container to be flex and use 90% of the window horizontally */
 .container {
   display: flex;
   width: 90vw;
 }
 
 .panel {
-  /* set bg image to full flex box size */
-  /* to preserve rounded corners on large screens use 
-  background-size: cover;
+  /* set bg image to full flex box size with
+  background-size: 100%
+    to preserve rounded corners on large screens use 
+  background-size: cover; 
   */
   background-size: cover;
 
   /* set bg image centered in flex box */
   background-position: center;
 
-  /* cut off repeated shit */
+  /* cut off repeated */
   background-repeat: no-repeat;
 
+  /* use 80% of the window vertically */
   height: 80vh;
 
   /* border: little rounded edges on boxes */
   border-radius: 50px;
 
+  /* set text color to white */
   color: white;
+
+  /* if hovering above a panel, show a pointer to let them know to click */
   cursor: pointer;
 
   /* initial flex */
   flex: 0.5;
 
   margin: 10px;
+
   position: relative;
+
+  /* this will be the transition for when you change a panel */
   transition: flex 0.7s ease-in;
 }
 
+
 .panel h3 {
   font-size: 36px;
+
+  /* since the panel is relative, absolute position here means 
+    means it will be absolute compared to the panel */
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+
+  /* inside each panel, start the header 20px from bottom and 20px from left */
+  bottom: 45px;
+  left: 45px;
+
+
   margin: 0;
+
+  /* set text opacity to 0 if the panel is not selected */
   opacity: 0;
 }
 
+/* setting different strokes for each panel depending on bg image */
 .panel h3.about {
   -webkit-text-stroke: 1px rgb(19, 24, 36);
 }
@@ -84,25 +107,32 @@ body {
   -webkit-text-stroke: 1px rebeccapurple;
 }
 
+/* if the panel is is active, give it a much bigger flex weight to show more of it */
 .panel.active {
   flex: 5;
   max-width: 3500px;
 }
 
+
 .panel.active h3 {
+
+  /* if the panel is active we want to see the text */
   opacity: 1;
+
+  /* show the opacity change with a transition */
   transition: opacity 0.3s ease-in 0.4s;
-  bottom: 45px;
-  left: 45px;
 }
 
+/* if the window is less than 600 pixels do this: */
 @media (max-width: 600px) {
+
+  /* make the panel container fill the whole window to give some more space */
   .container {
     width: 100vw;
   }
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
+  /* change the display of the last couple panels to only show 3 */
+  .panel:nth-of-type(4){
     display: none;
   }
 }
