@@ -78,10 +78,16 @@ to get a quarter circle in the top left */
   font-size: 26px;
   color: white;
   cursor: pointer;
+  transition: scale() 0.2s ease-in;
 }
 
 .circle button:focus {
   outline: none;
+}
+
+.circle button:hover {
+  transform: scale(0.93);
+  transition: scale() 0.2s ease-out;
 }
 
 /* move the buttons on the circle so we can rotate and see them */
