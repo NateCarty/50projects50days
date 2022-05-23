@@ -1,1 +1,3 @@
-# 50projects50days This is basically the setup file.
+# 50projects50days. All projects are based on the udemy course:
+
+https://www.udemy.com/course/50-projects-50-days/
