@@ -9,7 +9,6 @@
 }
 
 body {
-
   /* margin means space between item and other items */
   margin: 0;
 
@@ -32,24 +31,28 @@ body {
   padding: 50px;
 }
 
-.container.show-nav .content-container{
+/* if the container has show-nav, rotate the content inside */
+.container.show-nav .content-container {
   transform: rotate(-20deg);
 }
 
+/* and move any nav list items to their "original" position */
 .container.show-nav ~ nav li {
   transform: translateX(0);
   transition-delay: 0.3s;
 }
 
+/* set position of container to half circle length / width 
+to get a quarter circle in the top left */
 .circle-container {
   position: fixed;
   top: -100px;
   left: -100px;
   z-index: 100;
   transition: transform 0.5s linear;
-
 }
 
+/* border-radius: 50% makes a circle */
 .circle {
   background-color: rgb(14, 216, 255);
   height: 200px;
@@ -58,11 +61,13 @@ body {
   position: relative;
 }
 
+/* when the container has show-nav, rotate the circle so you can see other button */
 .container.show-nav .circle-container {
   transform: rotate(-90deg);
   transition: transform 0.5s linear;
 }
 
+/* positioning is relative to circle container */
 .circle button {
   position: absolute;
   top: 50%;
@@ -79,6 +84,7 @@ body {
   outline: none;
 }
 
+/* move the buttons on the circle so we can rotate and see them */
 .circle button#open {
   left: 60%;
 }
@@ -89,10 +95,9 @@ body {
   transform-origin: top left;
 }
 
-.content img{
+.content img {
   max-width: 100%;
 }
-
 
 nav {
   position: fixed;
@@ -143,7 +148,7 @@ nav ul li + li + li {
   font-style: italic;
 }
 
-.content p{
+.content p {
   color: darkgray;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
