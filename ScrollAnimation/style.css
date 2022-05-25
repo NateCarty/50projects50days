@@ -9,10 +9,10 @@
 }
 
 body {
+  background-color: rgb(201, 179, 152);
 
   /* margin means space between item and other items */
   margin: 0;
-
 
   display: flex;
 
@@ -25,11 +25,38 @@ body {
   /* put items in the center of the flex display */
   justify-content: center;
 
-  /* body is 100% of browser height */
-  height: 100vh;
-
-  /* no scroll bars */
-  overflow: hidden;
-
   font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  color: white;
+  margin: 10px;
+}
+
+.box {
+  height: 25vh;
+  width: 25vw;
+  background-color: rgb(201, 179, 152);
+
+  background-size: contain;
+
+  /* set bg image centered in flex box */
+  background-position: center;
+
+  /* cut off repeated */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(400%);
+  transition: transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
 }
