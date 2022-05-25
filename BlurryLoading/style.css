@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
 /* universal selector */
 * {
@@ -9,15 +9,10 @@
 }
 
 body {
-
   /* margin means space between item and other items */
   margin: 0;
 
-
   display: flex;
-
-  /* make items flex vertically */
-  flex-direction: column;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
@@ -31,5 +26,27 @@ body {
   /* no scroll bars */
   overflow: hidden;
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.bg {
+  background: url("https://www.thespruce.com/thmb/9EP5wfoBv3n_HkH5LW1QmtuRunE=/4500x3000/filters:fill(auto,1)/KoiPond-5fe8b3a605ef4743a55dba059cfb531b.jpg")
+    no-repeat center center/cover;
+  position: absolute;
+  top: -30;
+  left: -30;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  filter: blur(0px);
+}
+
+.loading-text {
+  font-size: 50px;
+  color: white;
+  position: relative;
+  left: 50%;
+  top: 50%;
 }
