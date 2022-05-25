@@ -29,7 +29,7 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.bg-div {
+.bg {
   background: url("https://www.thespruce.com/thmb/9EP5wfoBv3n_HkH5LW1QmtuRunE=/4500x3000/filters:fill(auto,1)/KoiPond-5fe8b3a605ef4743a55dba059cfb531b.jpg")
     no-repeat center center/cover;
   position: absolute;
@@ -46,7 +46,6 @@ body {
 .loading-text {
   font-size: 50px;
   color: white;
-  position: relative;
-  left: 50%;
-  top: 50%;
+  left: 50vw;
+  top: 50vh;
 }
