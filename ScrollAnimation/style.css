@@ -1,0 +1,65 @@
+/* https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+
+/* universal selector */
+* {
+  /* this means if we ever add and padding or border to 
+    and element, the width is not actually affected */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(201, 179, 152);
+
+  /* margin means space between item and other items */
+  margin: 0;
+
+  display: flex;
+
+  /* make items flex vertically */
+  flex-direction: column;
+
+  /* align the items towards the center vertically (even space on both sides) */
+  align-items: center;
+  overflow-x: hidden;
+
+  /* put items in the center of the flex display */
+  justify-content: center;
+
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 35px;
+}
+
+.box {
+  height: 25vh;
+  width: 25vw;
+  background-color: rgb(201, 179, 152);
+
+  background-size: contain;
+
+  /* set bg image centered in flex box */
+  background-position: center;
+
+  /* cut off repeated */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(400%);
+  transition: transform 0.3s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
