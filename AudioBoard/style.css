@@ -10,20 +10,23 @@
 
 body {
 
+  background-color: bisque;
+
   /* margin means space between item and other items */
   margin: 0;
 
 
   display: flex;
 
-  /* make items flex vertically */
-  flex-direction: column;
+  flex-wrap: wrap;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
 
   /* put items in the center of the flex display */
   justify-content: center;
+
+  text-align: center;
 
   /* body is 100% of browser height */
   height: 100vh;
@@ -32,4 +35,24 @@ body {
   overflow: hidden;
 
   font-family: "Source Sans Pro", sans-serif;
+}
+
+
+.btn {
+  background-color: sienna;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
 }
