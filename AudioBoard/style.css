@@ -55,4 +55,5 @@ body {
 
 .btn:focus {
   outline: none;
+  transform: scale(0.95);
 }
