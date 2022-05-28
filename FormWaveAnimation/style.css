@@ -10,6 +10,9 @@
 
 body {
 
+  background-color: rgba(34, 139, 34, 0.707);
+  color: aliceblue;
+
   /* margin means space between item and other items */
   margin: 0;
 
@@ -32,4 +35,71 @@ body {
   overflow: hidden;
 
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: rgba(26, 201, 116, 0.815);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px white solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.form-control input:focus, .form-control input:valid {
+  outline: 0;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: rgba(26, 201, 116, 0.815);
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn:focus  {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0px
 }
