@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 /* universal selector */
 * {
@@ -9,27 +9,54 @@
 }
 
 body {
+  font-family: "Muli", sans-serif;
+  background-color: rgb(189, 208, 208);
+}
 
-  /* margin means space between item and other items */
-  margin: 0;
 
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
 
-  display: flex;
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-  /* make items flex vertically */
-  flex-direction: column;
-
-  /* align the items towards the center vertically (even space on both sides) */
-  align-items: center;
-
-  /* put items in the center of the flex display */
-  justify-content: center;
-
-  /* body is 100% of browser height */
-  height: 100vh;
-
-  /* no scroll bars */
+.faq {
+  background-color: transparent;
+  border: 1px solid blue;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
   overflow: hidden;
+  transition: 0.3s ease;
+}
 
-  font-family: "Source Sans Pro", sans-serif;
+.faq.active {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+ .faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: greenyellow;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: rgb(0, 89, 255);
+  top: -10px;
+  left: -20px;
+  font-size: 6rem;
+  transform: rotateY(180deg);
 }
