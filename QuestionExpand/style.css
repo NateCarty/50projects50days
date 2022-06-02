@@ -60,3 +60,16 @@ h1 {
   font-size: 6rem;
   transform: rotateY(180deg);
 }
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
