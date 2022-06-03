@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 /* universal selector */
 * {
@@ -9,6 +9,8 @@
 }
 
 body {
+  background-color: darkcyan;
+  background-image: linear-gradient(to bottom, darkcyan 0%, darkcyan 50%, rgb(11, 255, 255) 50%, rgb(11, 255, 255) 100%);
 
   /* margin means space between item and other items */
   margin: 0;
@@ -16,8 +18,6 @@ body {
 
   display: flex;
 
-  /* make items flex vertically */
-  flex-direction: column;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
@@ -28,8 +28,54 @@ body {
   /* body is 100% of browser height */
   height: 100vh;
 
-  /* no scroll bars */
-  overflow: hidden;
+  margin: 0;
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Muli", sans-serif;
+}
+
+nav {
+  background-color: white;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 350px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width:  0;
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
 }
