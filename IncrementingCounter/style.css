@@ -1,5 +1,5 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 /* universal selector */
 * {
@@ -16,9 +16,6 @@ body {
 
   display: flex;
 
-  /* make items flex vertically */
-  flex-direction: column;
-
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
 
@@ -31,5 +28,15 @@ body {
   /* no scroll bars */
   overflow: hidden;
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
+
+  background-color: rgb(95, 17, 150);
+  color: white;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 50px;
 }
