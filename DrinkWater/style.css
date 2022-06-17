@@ -102,3 +102,19 @@ h3 {
 .remainder small {
   font-size: 12px;
 }
+
+.percentage {
+  background-color: var(--fill-color);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 0;
+  transition: 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+}
