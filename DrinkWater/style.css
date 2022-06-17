@@ -1,5 +1,9 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+:root {
+  --border-color: #144fc6;
+}
 
 /* universal selector */
 * {
@@ -9,6 +13,8 @@
 }
 
 body {
+  background-color: rgb(0, 110, 255);
+  color: white;
 
   /* margin means space between item and other items */
   margin: 0;
@@ -22,14 +28,43 @@ body {
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
 
-  /* put items in the center of the flex display */
-  justify-content: center;
+  font-family: "Montserrat", sans-serif;
 
-  /* body is 100% of browser height */
-  height: 100vh;
+  margin-bottom: 40px;
+}
 
-  /* no scroll bars */
+h1 {
+  margin: 10px 0 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.cup {
+  background-color: white;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+}
 
-  font-family: "Source Sans Pro", sans-serif;
+.cup.cup-small {
+  width: 50px;
+  height: 95px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
 }
