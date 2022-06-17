@@ -3,6 +3,7 @@
 
 :root {
   --border-color: #144fc6;
+  --fill-color: #6ab3f8;
 }
 
 /* universal selector */
@@ -35,6 +36,7 @@ body {
 
 h1 {
   margin: 10px 0 0;
+  font-size: smaller;
 }
 
 h3 {
@@ -47,9 +49,9 @@ h3 {
   border: 4px solid var(--border-color);
   color: var(--border-color);
   border-radius: 0 0 40px 40px;
-  height: 330px;
+  height: 230px;
   width: 150px;
-  margin: 30px 0;
+  margin: 15px 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -67,4 +69,36 @@ h3 {
   text-align: center;
   margin: 5px;
   transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: white;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.remainder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.remainder span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.remainder small {
+  font-size: 12px;
 }
