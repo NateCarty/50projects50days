@@ -1,6 +1,13 @@
 /* https://fonts.google.com/ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
+:root {
+  --primary-color: rgb(40, 39, 39);
+  --secondary-color: rgb(52, 51, 51);
+
+
+}
+
 /* universal selector */
 * {
   /* this means if we ever add and padding or border to 
@@ -9,27 +16,86 @@
 }
 
 body {
-
+  background-color: var(--primary-color);
   /* margin means space between item and other items */
   margin: 0;
-
-
-  display: flex;
-
-  /* make items flex vertically */
-  flex-direction: column;
-
-  /* align the items towards the center vertically (even space on both sides) */
-  align-items: center;
-
-  /* put items in the center of the flex display */
-  justify-content: center;
-
-  /* body is 100% of browser height */
-  height: 100vh;
-
-  /* no scroll bars */
-  overflow: hidden;
-
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  color: white;
+}
+
+.search::placeholder {
+  color: gainsboro;
+}
+
+.search::focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info{
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: .5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: rgb(49, 195, 49);
+}
+
+.movie-info span.orange {
+  color: rgb(255, 174, 0);
+}
+
+.movie-info span.red {
+  color: rgb(216, 31, 31);
 }
