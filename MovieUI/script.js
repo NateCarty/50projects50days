@@ -27,7 +27,6 @@ function showMovies(movies) {
         movieElement.classList.add('movie')
 
         movieElement.innerHTML = `
-        <div class="movie">
             <img src="${IMG_PATH + poster_path}" alt="${title}">
             <div class="movie-info">
                 <h3>${title}</h3>
@@ -37,8 +36,8 @@ function showMovies(movies) {
                 <h3>Overview</h3>
                 ${overview}
             </div>
-        </div>
         `
+        main.appendChild(movieElement)
     })
 }
 
