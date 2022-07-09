@@ -1,0 +1,61 @@
+/* https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+
+/* universal selector */
+* {
+  /* this means if we ever add and padding or border to 
+    and element, the width is not actually affected */
+  box-sizing: border-box;
+}
+
+body {
+  /* margin means space between item and other items */
+  margin: 0;
+
+  display: flex;
+
+  /* align the items towards the center vertically (even space on both sides) */
+  align-items: center;
+
+  /* put items in the center of the flex display */
+  justify-content: center;
+
+  /* body is 100% of browser height */
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+
+  background-image: url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBhdHRlcm58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  background-position: center center;
+  background-size: cover;
+
+  transition: 0.4s;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.slider-container {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+}
