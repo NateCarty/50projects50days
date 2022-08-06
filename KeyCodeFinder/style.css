@@ -47,6 +47,11 @@ body {
   margin: 10px;
   min-width: 150px;
   position: relative;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.key:hover {
+  transform: translateY(30px) scale(1.15);
 }
 
 .key small {
@@ -57,6 +62,7 @@ body {
   width: 100%;
   font-size: 14px;
   color: rgb(255, 255, 255);
+  pointer-events: none;
 }
 
 .big-1 {
