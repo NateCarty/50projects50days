@@ -9,13 +9,14 @@
 }
 
 body {
-  background-color: darkkhaki;
+  background-color: #d3d3d3;
 
   /* margin means space between item and other items */
   margin: 0;
 
+  display: grid;
 
-  display: flex;
+  position: relative;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
@@ -36,7 +37,7 @@ body {
 .key {
   border: 1px solid gainsboro;
   background-color: #f8f6f6;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   display: inline-flex;
   align-items: center;
   font-size: 20px;
@@ -45,7 +46,7 @@ body {
   flex-direction: column;
   margin: 10px;
   min-width: 150px;
-  position: relative; 
+  position: relative;
 }
 
 .key small {
@@ -55,5 +56,17 @@ body {
   text-align: center;
   width: 100%;
   font-size: 14px;
-  color: cornsilk;
+  color: rgb(255, 255, 255);
+}
+
+.big-1 {
+  color: rgb(26, 39, 26);
+  font-size: 125px;
+  margin: 10px;
+}
+
+.big {
+  color: rgb(26, 39, 26);
+  font-size: 275px;
+  margin: 10px;
 }
