@@ -61,12 +61,12 @@ body {
 
 .big-1 {
   color: rgb(26, 39, 26);
-  font-size: 125px;
+  font-size: 10vw;
   margin: 10px;
 }
 
 .big {
   color: rgb(26, 39, 26);
-  font-size: 275px;
+  font-size: 40vw;
   margin: 10px;
 }
