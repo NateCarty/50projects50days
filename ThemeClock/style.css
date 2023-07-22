@@ -1,11 +1,29 @@
 /* https://fonts.google.com/ */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
 /* universal selector */
 * {
   /* this means if we ever add and padding or border to 
     and element, the width is not actually affected */
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color)
 }
 
 body {
@@ -15,9 +33,6 @@ body {
 
 
   display: flex;
-
-  /* make items flex vertically */
-  flex-direction: column;
 
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
@@ -31,5 +46,60 @@ body {
   /* no scroll bars */
   overflow: hidden;
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lumanosimo', cursive;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: 'Lumanosimo', cursive;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(30deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(45deg);
+  height: 100px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(60deg);
+  height: 100px;
+  background-color: red;
 }
