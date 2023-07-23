@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: black;
 
   /* margin means space between item and other items */
   margin: 0;
@@ -16,6 +17,7 @@ body {
 
   display: flex;
 
+  flex-direction: column;
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
 
@@ -29,4 +31,39 @@ body {
   overflow: hidden;
 
   font-family: "Heebo", sans-serif;
+}
+
+button {
+  background-color: blueviolet;
+  color: white;
+  border: 1px blueviolet solid;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }

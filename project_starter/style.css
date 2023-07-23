@@ -16,6 +16,8 @@ body {
 
   display: flex;
 
+  flex-direction: column;
+
   /* align the items towards the center vertically (even space on both sides) */
   align-items: center;
 
